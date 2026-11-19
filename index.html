@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>猫毛宇宙</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="page">
+  <div id="stage">
+    <canvas id="game" width="320" height="180"></canvas>
+    <div id="hud">
+      <div class="hud-left">
+        <span id="player-name"></span>
+        <button type="button" id="switch-account" class="pixel-btn" hidden>切换</button>
+      </div>
+      <span class="hud-mid">
+        <span id="layer-label">梳毛次数: 0</span>
+        <span id="weight-label">毛重: 0克</span>
+      </span>
+      <span class="hud-right"><i class="treat" aria-hidden="true"></i><i class="treat" aria-hidden="true"></i></span>
+    </div>
+    <p id="stage-copy"></p>
+    <div id="login" hidden>
+      <p id="login-title">猫毛宇宙</p>
+      <p id="login-hint">写下名字，开始梳毛</p>
+      <input id="nickname" type="text" maxlength="24" autocomplete="off" placeholder="你的名字">
+      <button type="button" id="login-start" class="pixel-btn">开始</button>
+      <p id="login-error"></p>
+    </div>
+    <div id="revive" hidden>
+      <div id="revive-panel">
+        <p id="revive-text">被挠了！喂根猫条继续梳？</p>
+        <button type="button" id="revive-confirm" class="pixel-btn">【确认喂猫条】</button>
+      </div>
+    </div>
+    <div id="start-tip" hidden>
+      <p id="start-tip-line1"></p>
+      <p id="start-tip-line2"></p>
+    </div>
+    <div id="overlay" hidden>
+      <div id="end-panel">
+        <p id="overlay-title">被挠了</p>
+        <p id="overlay-detail"></p>
+        <button type="button" id="restart" class="pixel-btn">再来一局</button>
+        <button type="button" id="show-board" class="pixel-btn">查看排行榜</button>
+        <button type="button" id="overlay-switch" class="pixel-btn">切换账号</button>
+      </div>
+      <div id="board-panel" hidden>
+        <p id="board-title">本机排行榜</p>
+        <div id="board-list"></div>
+        <button type="button" id="board-back" class="pixel-btn">返回</button>
+      </div>
+    </div>
+  </div>
+  </div>
+  <script type="module" src="js/game.js"></script>
+</body>
+</html>
